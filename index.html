@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Comparador</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            background-image: url(img/fundo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        table, tr, td{
+            text-align: center;
+            font-size: 40px;
+            font-family: Georgia, serif;
+            background-color: rgba(255, 255, 255, 0.4);
+            width: 50%;
+            height: 30%;
+            position: relative;
+            margin-top: 10%;
+        }
+        .botão{
+            font-size: 40px;
+            font-family: Georgia, serif;
+            cursor: pointer;
+            background-color: transparent;
+            border: transparent;
+        }
+        .input{
+            font-size: 40px;
+            font-family: Georgia, serif;
+            text-align: center;
+            background-color: transparent;
+            border: transparent;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        a=parseFloat(document.getElementById("valor_1").value)
+        b=parseFloat(document.getElementById("valor_2").value)
+        c=parseFloat(document.getElementById("valor_3").value)
+       function maior(){
+        var a,b,c
+        a=parseFloat(document.getElementById("valor_1").value)
+        b=parseFloat(document.getElementById("valor_2").value)
+        c=parseFloat(document.getElementById("valor_3").value)
+        if((a==b) && (c>a)){
+                    document.getElementById("a").innerHTML = "O maior número é o "+ c +".";
+                    document.getElementById("c").innerHTML = "O 1º e o 2º números são iguais.";
+        }else if((a==c) && (b>a)){
+                    document.getElementById("a").innerHTML = "O maior número é o "+ b +".";
+                    document.getElementById("c").innerHTML = "O 1º e o 3º números são iguais.";
+        }else if((b==c) && (a>b)){
+                    document.getElementById("a").innerHTML = "O maior número é o "+ a +".";
+                    document.getElementById("c").innerHTML = "O 2º e o 3º números são iguais.";
+        }else if((a==b) && (a>c)){
+                    document.getElementById("a").innerHTML = "O maior número é o "+ a +".";
+                    document.getElementById("c").innerHTML = "O 1º e o 2º números são iguais.";
+        }else if((a==c) && (a>b)){
+                    document.getElementById("a").innerHTML = "O maior número é o "+ a +".";
+                    document.getElementById("c").innerHTML = "O 1º e o 3º números são iguais.";
+        }else if((b==c) && (b>a)){
+                    document.getElementById("a").innerHTML = "O maior número é o "+ b +".";
+                    document.getElementById("c").innerHTML = "O 2º e o 3º números são iguais.";
+        }else if((a>b) && (a>c)){
+                    document.getElementById("a").innerHTML = "O maior número é o "+ a +".";
+                    document.getElementById("c").innerHTML = "Os números são todos diferentes.";
+        }else if((b>a) && (b>c)){
+                    document.getElementById("a").innerHTML = "O maior número é o "+ b +".";
+                    document.getElementById("c").innerHTML = "Os números são todos diferentes.";
+        }else if((c>a) && (c>b)){
+                    document.getElementById("a").innerHTML = "O maior número é o "+ c +".";
+                    document.getElementById("c").innerHTML = "Os números são todos diferentes.";
+        }else if((a==b) && (a==c) &&(b==c)){
+                    document.getElementById("a").innerHTML = "Não há número maior.";
+                    document.getElementById("c").innerHTML = "Os números são todos iguais.";
+    }
+}
+    function menor(){
+        var a,b,c
+        a=parseFloat(document.getElementById("valor_1").value)
+        b=parseFloat(document.getElementById("valor_2").value)
+        c=parseFloat(document.getElementById("valor_3").value)
+        if((a==b) && (c<a)){
+                    document.getElementById("b").innerHTML = "O menor número é o "+ c +".";
+                    document.getElementById("c").innerHTML = "O 1º e o 2º números são iguais.";
+        }else if((a==c) && (b<a)){
+                    document.getElementById("b").innerHTML = "O menor número é o "+ b +".";
+                    document.getElementById("c").innerHTML = "O 1º e o 3º números são iguais.";
+        }else if((b==c) && (a<b)){
+                    document.getElementById("b").innerHTML = "O menor número é o "+ a +".";
+                    document.getElementById("c").innerHTML = "O 2º e o 3º números são iguais.";
+        }else if((a==b) && (a<c)){
+                    document.getElementById("b").innerHTML = "O menor número é o "+ a +".";
+                    document.getElementById("c").innerHTML = "O 1º e o 2º números são iguais.";
+        }else if((a==c) && (a<b)){
+                    document.getElementById("b").innerHTML = "O menor número é o "+ a +".";
+                    document.getElementById("c").innerHTML = "O 1º e o 3º números são iguais.";
+        }else if((b==c) && (b<a)){
+                    document.getElementById("b").innerHTML = "O menor número é o "+ b +".";
+                    document.getElementById("c").innerHTML = "O 2º e o 3º números são iguais.";
+        }else if((a<b) && (a<c)){
+                    document.getElementById("b").innerHTML = "O menor número é o "+ a +".";
+                    document.getElementById("c").innerHTML = "Os números são todos diferentes.";
+        }else if((b<a) && (b<c)){
+                    document.getElementById("b").innerHTML = "O menor número é o "+ b +".";
+                    document.getElementById("c").innerHTML = "Os números são todos diferentes.";
+        }else if((c<a) && (c<b)){
+                    document.getElementById("b").innerHTML = "O menor número é o "+ c +".";
+                    document.getElementById("c").innerHTML = "Os números são todos diferentes.";
+        }else if((a==b) && (a==c) &&(b==c)){
+                    document.getElementById("b").innerHTML = "Não há número menor.";
+                    document.getElementById("c").innerHTML = "Os números são todos iguais.";
+    }
+    }
+    </script>
+    <center><table>
+        <tr><td><form>
+            <label for="input_1"></label>
+            <input type="number" class="input" id="valor_1" min="0" max="22">
+        </form></td></tr>
+        <tr><td><form>
+            <label for="input_2"></label>
+            <input type="number" class="input" id="valor_2" min="0" max="22">
+        </form></td></tr>
+        <tr><td><form>
+            <label for="input_3"></label>
+            <input type="number" class="input" id="valor_3" min="0" max="22">
+        </form></td></tr>
+    <tr><td><button type="button" class="botão" onclick="maior(),menor()">Processar</button></td></tr>
+    <tr><td id="a"></p></td></tr>
+<tr><td id="b"></p></td></tr>
+<tr><td id="c"></p></td></tr>
+</table></center>
+</body>
+</html>
